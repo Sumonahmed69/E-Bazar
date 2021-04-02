@@ -1,0 +1,15 @@
+.nav-style{
+    margin-left: 60px;
+    
+}
+#login-btn{
+    background-color:salmon;
+   
+    border-radius: 5px;
+}
+#logo{
+    height: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 0px;
+}

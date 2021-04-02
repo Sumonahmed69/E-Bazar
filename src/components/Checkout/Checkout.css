@@ -1,0 +1,19 @@
+#checkout-form{
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+#oder-frm{
+    height: 300px;
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+    border: dotted 1px gray;
+
+}
+#checkout-btn{
+    
+    padding: 10px;
+    margin: 20px;
+    
+}
