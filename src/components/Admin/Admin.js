@@ -3,16 +3,18 @@ import './Admin.css';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPencilAlt, faPlus, faUserShield } from '@fortawesome/free-solid-svg-icons';
+import { faPencilAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 const Admin = () => {
 
-    const { register, handleSubmit, watch, errors } = useForm();
+
     const [imageURL, setImageURL] = useState();
+ 
+    
 
 
-
+    const { register, handleSubmit} = useForm();
     const onSubmit = data => {
 
         const eventData = {
@@ -33,6 +35,7 @@ const Admin = () => {
             body: JSON.stringify(eventData)
         })
             .then(res => console.log('server res', res))
+            
 
     };
 
@@ -59,16 +62,16 @@ const Admin = () => {
 
 
             <div className='manageproduct-div'>
-                <h4>Manage Proudcts</h4><br/>
-                <h6 > <FontAwesomeIcon icon={faPlus} /> Add Products</h6><br/>
+                <h4>Manage Proudcts</h4><br />
+                <h6 > <FontAwesomeIcon icon={faPlus} /> Add Products</h6><br />
                 <h6> <FontAwesomeIcon icon={faPencilAlt} /> Edit Products</h6>
             </div>
 
 
             <div >
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className='input-from input' name="example"  placeholder='Adder product' ref={register} /> 
-                    <input className='input-from input'  name="example"  placeholder='Adder price' ref={register} /> <br/> 
+                    <input className='input-from input' name="name" placeholder='Adder product' ref={register} />
+                    <input className='input-from input' name="price" placeholder='Adder price' ref={register} /> <br />
                     <input className='input-from' id='imgUpLoad' name="exampleRequired" type="file" onChange={handleImageUpload} /> <br />
                     <input className='input-from' id='submit-btn' type="submit" />
                 </form>
